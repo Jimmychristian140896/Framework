@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/lbl_isi_saldo_ke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Isi Saldo Ke"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/txt_isi_saldo_ke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:text="OVO Cash"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_isi_saldo_ke" />
+
+            <ImageView
+                android:id="@+id/img_expand_isi_saldo_ke"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_isi_saldo_ke"
+                app:layout_constraintRight_toRightOf="@+id/txt_isi_saldo_ke"
+                app:layout_constraintTop_toTopOf="@+id/txt_isi_saldo_ke"
+                app:srcCompat="@drawable/ic_expand_more_black_24dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_saldo_ovo_cash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_home_ovo_investasi"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_isi_saldo_ke"
+                android:padding="10dp"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:id="@+id/lbl_saldo_ovo_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SALDO OVO CASH"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/txt_saldo_ovo_cash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rp165.000"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/lbl_max_saldo_ovo_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maks. Saldo OVO Cash Rp10.000.000"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_saldo_ovo_cash"
+                android:layout_marginTop="16dp"
+
+                />
+            <TextView
+                android:id="@+id/lbl_isi_saldo_dari"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Dari"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_max_saldo_ovo_cash" />
+
+            <EditText
+                android:id="@+id/txt_isi_saldo_dari"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:text="ATM/Internet/Mobile Banking"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_isi_saldo_dari" />
+
+            <ImageView
+                android:id="@+id/img_expand_isi_saldo_dari"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_isi_saldo_dari"
+                app:layout_constraintRight_toRightOf="@+id/txt_isi_saldo_dari"
+                app:layout_constraintTop_toTopOf="@+id/txt_isi_saldo_dari"
+                app:srcCompat="@drawable/ic_expand_more_black_24dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_isi_saldo_dari" >
+                <TextView
+                    android:id="@+id/lbl_title_instruksi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Instruksi"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_instruksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_title_instruksi"></android.support.v7.widget.RecyclerView>
+        </android.support.constraint.ConstraintLayout>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

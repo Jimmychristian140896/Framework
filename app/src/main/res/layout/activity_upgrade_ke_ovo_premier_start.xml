@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="32dp">
+        <TextView
+            android:id="@+id/lbl_title_lengkapi_data_anda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lengkapi data-data Anda"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/lbl_email_terdaftar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Anda hanya membutuhkan beberaoa menit"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_title_lengkapi_data_anda"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/img_card_id"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/ic_add_black_24dp"
+            android:fitsSystemWindows="true"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_email_terdaftar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:id="@+id/lbl_siapkan_ktp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mohon untuk menyiapkan KTP Anda"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="4dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/img_card_id"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+
+        <Button
+            android:id="@+id/btn_mulai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="MULAI"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_selector_simpan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </android.support.design.widget.AppBarLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+<TextView
+    android:id="@+id/lbl_title_akun"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Akun"
+    android:textSize="20sp"
+    android:textColor="@color/colorPrimary"
+    android:textStyle="bold"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+    <TextView
+        android:id="@+id/lbl_edit_profil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Edit Profil"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title_akun"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:id="@+id/separator_edit_profil"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_edit_profil"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:id="@+id/lbl_kode_promo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kode Promo"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/separator_edit_profil"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:id="@+id/separator_kode_promo"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_kode_promo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/lbl_title_keamanan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Keamanan"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator_kode_promo"
+        android:layout_marginTop="32dp"
+        />
+    <TextView
+        android:id="@+id/lbl_ubah_security_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ubah Security Code"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title_keamanan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:id="@+id/separator_ubah_security_code"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_ubah_security_code"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/lbl_title_tentang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tentang"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator_ubah_security_code"
+        android:layout_marginTop="32dp"
+        />
+    <TextView
+        android:id="@+id/lbl_tentang_ovo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tentang OVO"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title_tentang"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:id="@+id/separator_tentang_ovo"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_tentang_ovo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+    android:id="@+id/lbl_informasi"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Informasi"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:textSize="20sp"
+    android:textColor="@android:color/black"
+    app:layout_constraintTop_toBottomOf="@+id/separator_tentang_ovo"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:id="@+id/separator_informasi"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_informasi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/lbl_faq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="FAQ"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/separator_informasi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:id="@+id/separator_faq"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_faq"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/lbl_saran"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Saran"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/separator_faq"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:id="@+id/separator_saran"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_saran"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/lbl_hubungi_ovo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hubungi OVO"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/separator_saran"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:id="@+id/separator_hubungi_ovo"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_hubungi_ovo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/lbl_ovo_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Version 1.7.0 (267)"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/separator_hubungi_ovo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="SIGN OUT"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/button_circle"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_ovo_version"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
+</android.support.design.widget.CoordinatorLayout>

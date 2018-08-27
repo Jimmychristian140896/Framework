@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+
+
+        <TextView
+            android:id="@+id/lbl_ket_hubungi_ovo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Jika Anda membutuhkan bantuan agen kami, silahkan menghubungi:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+        <TextView
+            android:id="@+id/lbl_title_call_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call Center"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_ket_hubungi_ovo"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/txt_call_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1500 696"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_title_call_center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/txt_waktu_call_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Mon-Sun, 07:00 - 23:00 WIB)"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_call_center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/lbl_title_email_call_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_waktu_call_center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/txt_email_call_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cs@ovo.id"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_title_email_call_center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/lbl_lokasi_kios_ovo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lokasi Kios OVO"
+            android:background="@android:color/darker_gray"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_email_call_center"
+            android:layout_marginTop="32dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_lokasi_ovo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_lokasi_kios_ovo">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

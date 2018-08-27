@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+- As the name suggests, this layout models our viewitem.
+- We define how each Card shall appear in our List.
+- So at the root level we have a CardView widget.
+- We can also customize our CardView by specifying cardCornerRadius,cardElevation,width,height etc.
+- Each Card shall comprise textviews and images.
+-->
+<TextView android:id="@+id/txt_notification_message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Message"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/txt_nama_lokasi_kios_ovo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Siloam Hospitals Lippo Village"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_call"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"/>
+    <TextView
+        android:id="@+id/txt_alamat_lokasi_kios_ovo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Siloam Hospital Lippo VIllage, Lt.2, Jl. Siloam No.6, Lippo Karawaci 1600 Tangerang 15811"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nama_lokasi_kios_ovo"
+        app:layout_constraintRight_toLeftOf="@+id/img_call"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:id="@+id/txt_waktu_operasional_lokasi_kios_ovo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Jam : Mon - Sat 07.00 AM - 09.00 PM"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_alamat_lokasi_kios_ovo"
+        app:layout_constraintRight_toLeftOf="@+id/img_call"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <ImageView
+        android:id="@+id/img_location"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_nama_lokasi_kios_ovo"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_waktu_operasional_lokasi_kios_ovo"
+        />
+
+    <ImageView
+        android:id="@+id/img_call"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        app:layout_constraintRight_toLeftOf="@+id/img_location"
+        app:layout_constraintTop_toTopOf="@+id/txt_nama_lokasi_kios_ovo"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_waktu_operasional_lokasi_kios_ovo"
+        android:layout_marginRight="8dp"
+        />
+
+</android.support.constraint.ConstraintLayout>

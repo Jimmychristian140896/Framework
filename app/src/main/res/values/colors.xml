@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="msg_no_notes">#999</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="green_pastel">#42f495</color>
+    <color name="dark_green_pastel">#31d649</color>
+</resources>

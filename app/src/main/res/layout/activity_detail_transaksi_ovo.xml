@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_detail_transaksi_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@android:color/darker_gray">
+            <ImageView
+                android:id="@+id/img_detail_transaksi_header"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:fitsSystemWindows="true"
+                app:srcCompat="@drawable/ic_add_black_24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/txt_detail_transaksi_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/img_detail_transaksi_header"
+                />
+            <TextView
+                android:id="@+id/txt_detail_transaksi_sub_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sub Title"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_detail_transaksi_title"
+                app:layout_constraintLeft_toRightOf="@+id/img_detail_transaksi_header"
+                app:layout_constraintRight_toLeftOf="@+id/txt_detail_transaksi_value"
+                android:ellipsize="end"
+                android:maxLines="1"
+                />
+
+            <TextView
+                android:id="@+id/txt_detail_transaksi_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Value"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_detail_transaksi_title"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+        </android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/lbl_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/layout_detail_transaksi_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="16dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_no_referensi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_detail"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txt_no_referensi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No. Referensi"
+                android:text="pmo1111111111111111118007120147"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_tanggal_waktu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layout_no_referensi"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txt_tanggal_waktu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Waktu"
+                android:text="12 Jul 18, 10.48"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_dari"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layout_tanggal_waktu"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txt_dari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dari"
+                android:text="OVO Project Management"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_pesan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layout_dari"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txt_pesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pesan"
+                android:text=""/>
+        </android.support.design.widget.TextInputLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

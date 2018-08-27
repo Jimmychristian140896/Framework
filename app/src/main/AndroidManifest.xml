@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="framework.jimmy.com.framework">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <application
+        android:name=".FrameworkApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+        <activity android:name=".activity.MainOvoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.NotificationOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.DetailTransaksiOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.SettingOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.EditProfilOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.EditProfilEmailActivity">
+        </activity>
+
+        <activity android:name=".activity.EditProfilNomorPonselActivity">
+        </activity>
+
+        <activity android:name=".activity.KlaimKodePromoOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.AboutUsOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.HubungiOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.SaranOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.MyProfileOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.UpgradeKeOvoPremierStartActivity">
+        </activity>
+
+        <activity android:name=".activity.CameraKtpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenStyle">
+        </activity>
+
+        <activity android:name=".activity.UpgradeKeOvoPremierKtpActivity">
+        </activity>
+
+        <activity android:name=".activity.UpgradeKeOvoPremierLokasiActivity">
+        </activity>
+        <activity android:name=".activity.KiosOvoLokasiActivity">
+        </activity>
+
+        <activity android:name=".activity.DetailTransaksiKeluarOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.DetailBudgetOvoActivity">
+        </activity>
+        <activity android:name=".activity.GalaxyActivity">
+        </activity>
+
+        <activity android:name=".activity.PostOfficeActivity">
+        </activity>
+        <activity android:name=".activity.BarcodeCaptureActivity">
+        </activity>
+
+        <activity android:name=".activity.BarcodeConverterActivity">
+        </activity>
+
+        <activity android:name=".activity.MainActivity">
+        </activity>
+
+        <activity android:name=".activity.MainMvpDaggerActivity">
+        </activity>
+
+        <activity android:name=".activity.FlexibleActivity">
+        </activity>
+
+        <activity android:name=".activity.TopUpOvoActivity">
+        </activity>
+
+        <activity android:name=".activity.CustomBarcodeScannerActivity">
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBanvlnK7tTdyLqxqtXB19if3VTukCw5aM" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="23732a996b73a2d966e968e58e98729093eb15e0"
+            />
+
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+
+    </application>
+
+</manifest>

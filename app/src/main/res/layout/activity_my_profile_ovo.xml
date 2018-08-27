@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:padding="16dp">
+
+
+            <ImageView
+                android:id="@+id/img_customer_ovo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginTop="16dp"
+                app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+            <ImageView
+                android:id="@+id/img_customer_ovo_type"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_customer_ovo"
+                app:layout_constraintRight_toRightOf="@+id/img_customer_ovo"
+                app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+            <TextView
+                android:id="@+id/txt_customer_name_ovo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Jimmy"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_customer_ovo" />
+
+            <ImageView
+                android:id="@+id/img_qr_code"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:fitsSystemWindows="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_customer_name_ovo"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+            <TextView
+                android:id="@+id/lbl_keterangan_upgrade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Transaksi dengan OVO dan dapatkan OVO Points. Nikmati beragam fitur laiinya dengan Upgrade ke OVO Premier"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_qr_code"
+                android:layout_marginTop="32dp"/>
+
+            <Button
+                android:id="@+id/btn_upgrade_sekarang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_circle"
+                android:text="UPGRADE SEKARANG"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_keterangan_upgrade" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_upgrade_sekarang" />
+
+            <ImageView
+                android:id="@+id/img_ovo_premier"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider1"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+            <TextView
+                android:id="@+id/lbl_ovo_premier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="OVO Premier"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_ovo_premier"
+                app:layout_constraintLeft_toRightOf="@+id/img_ovo_premier"
+                app:layout_constraintTop_toTopOf="@+id/img_ovo_premier"
+                app:layout_constraintRight_toLeftOf="@+id/img_expand_ovo_premier"/>
+
+            <ImageView
+                android:id="@+id/img_expand_ovo_premier"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_ovo_premier"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_ovo_premier"
+                app:srcCompat="@drawable/ic_expand_more_black_24dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_ovo_premier_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_ovo_premier">
+
+                <TextView
+                    android:id="@+id/lbl_deskripsi_ovo_premier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Dapatkan OVO Points sebesar 10.000 dan nikmati berbagai keuntungan sebagai berikut:"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_batas_saldo_ovo_premier"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_deskripsi_ovo_premier"
+                    app:srcCompat="@drawable/ic_add_black_24dp" />
+
+                <TextView
+                    android:id="@+id/lbl_batas_saldo_ovo_premier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Batas saldo OVO Cash sampai dengan Rp10.000.000"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/img_batas_saldo_ovo_premier"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/img_batas_saldo_ovo_premier"
+                    android:layout_marginLeft="8dp"/>
+
+                <ImageView
+                    android:id="@+id/img_kelola_keuangan_premier"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_batas_saldo_ovo_premier"
+                    app:srcCompat="@drawable/ic_add_black_24dp" />
+
+                <TextView
+                    android:id="@+id/lbl_kelola_keuangan_premier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Kelola dan pantau keuangan Anda"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/img_kelola_keuangan_premier"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/img_kelola_keuangan_premier"
+                    android:layout_marginLeft="8dp"/>
+
+                <ImageView
+                    android:id="@+id/img_transfer_premier"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_kelola_keuangan_premier"
+                    app:srcCompat="@drawable/ic_add_black_24dp" />
+
+                <TextView
+                    android:id="@+id/lbl_transfer_premier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Transfer lebih mudah dan cepat"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/img_transfer_premier"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/img_transfer_premier"
+                    android:layout_marginLeft="8dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_ovo_premier_detail" />
+
+            <ImageView
+                android:id="@+id/img_ovo_club"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+            <TextView
+                android:id="@+id/lbl_ovo_club"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="OVO Club"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_ovo_club"
+                app:layout_constraintLeft_toRightOf="@+id/img_ovo_club"
+                app:layout_constraintTop_toTopOf="@+id/img_ovo_club"
+                app:layout_constraintRight_toLeftOf="@+id/img_expand_ovo_club"/>
+
+            <ImageView
+                android:id="@+id/img_expand_ovo_club"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_ovo_club"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_ovo_club"
+                app:srcCompat="@drawable/ic_expand_more_black_24dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_ovo_club_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_ovo_club">
+
+                <TextView
+                    android:id="@+id/lbl_deskripsi_ovo_club"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Keuntungan Anda sebagai OVO Club:"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_batas_saldo_ovo_club"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_deskripsi_ovo_club"
+                    app:srcCompat="@drawable/ic_add_black_24dp" />
+
+                <TextView
+                    android:id="@+id/lbl_batas_saldo_ovo_club"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Batas saldo OVO Cash sampai dengan Rp2.000.000"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/img_batas_saldo_ovo_club"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/img_batas_saldo_ovo_club"
+                    android:layout_marginLeft="8dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

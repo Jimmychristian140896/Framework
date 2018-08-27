@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_search_deals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:padding="16dp"
+            android:text="Cari Deals, Promo dan Merchants"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_search_deals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_search_deals"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_search_deals"
+            app:srcCompat="@drawable/ic_add_black_24dp" />
+    </android.support.constraint.ConstraintLayout>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view_promo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_promo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/img_near_me"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_promo"
+                app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+            <TextView
+                android:id="@+id/txt_near_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Near Me"
+                app:layout_constraintLeft_toLeftOf="@+id/img_near_me"
+                app:layout_constraintRight_toRightOf="@+id/img_near_me"
+                app:layout_constraintTop_toBottomOf="@+id/img_near_me" />
+
+            <ImageView
+                android:id="@+id/img_deals_promo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_promo"
+                app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+            <TextView
+                android:id="@+id/txt_deals_promo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deals n Promo"
+                app:layout_constraintLeft_toLeftOf="@+id/img_deals_promo"
+                app:layout_constraintRight_toRightOf="@+id/img_deals_promo"
+                app:layout_constraintTop_toBottomOf="@+id/img_deals_promo" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_near_me"
+                app:layout_constraintLeft_toLeftOf="@+id/img_near_me"
+                app:layout_constraintRight_toRightOf="@+id/img_deals_promo"
+                app:layout_constraintTop_toTopOf="@+id/img_near_me" />
+
+            <ImageView
+                android:id="@+id/img_my_vouchers"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_promo"
+                app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+            <TextView
+                android:id="@+id/my_vouchers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Voucher"
+                app:layout_constraintLeft_toLeftOf="@+id/img_my_vouchers"
+                app:layout_constraintRight_toRightOf="@+id/img_my_vouchers"
+                app:layout_constraintTop_toBottomOf="@+id/img_my_vouchers" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_near_me"
+                app:layout_constraintLeft_toLeftOf="@+id/img_deals_promo"
+                app:layout_constraintRight_toRightOf="@+id/img_my_vouchers"
+                app:layout_constraintTop_toTopOf="@+id/img_near_me" />
+
+            <ImageView
+                android:id="@+id/img_mall"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_near_me"
+                app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+            <TextView
+                android:id="@+id/txt_mall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mall"
+                app:layout_constraintLeft_toLeftOf="@+id/img_mall"
+                app:layout_constraintRight_toRightOf="@+id/img_mall"
+                app:layout_constraintTop_toBottomOf="@+id/img_mall" />
+
+            <ImageView
+                android:id="@+id/img_merchants"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_deals_promo"
+                app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+            <TextView
+                android:id="@+id/txt_merchants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Merchants"
+                app:layout_constraintLeft_toLeftOf="@+id/img_merchants"
+                app:layout_constraintRight_toRightOf="@+id/img_merchants"
+                app:layout_constraintTop_toBottomOf="@+id/img_merchants" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_mall"
+                app:layout_constraintLeft_toLeftOf="@+id/img_mall"
+                app:layout_constraintRight_toRightOf="@+id/img_merchants"
+                app:layout_constraintTop_toTopOf="@+id/img_mall" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_mall"
+                app:layout_constraintLeft_toLeftOf="@+id/img_merchants"
+                app:layout_constraintRight_toRightOf="@+id/img_my_vouchers"
+                app:layout_constraintTop_toTopOf="@+id/img_mall" />
+
+            <TextView
+                android:id="@+id/lbl_kategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Kategori"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/txt_mall" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_kategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_kategori"></android.support.v7.widget.RecyclerView>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>
