@@ -201,5 +201,7 @@ dependencies {
 
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+
 }
 apply plugin: 'com.google.gms.google-services'

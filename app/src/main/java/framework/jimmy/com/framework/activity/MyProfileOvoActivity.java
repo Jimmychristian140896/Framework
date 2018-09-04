@@ -40,6 +40,7 @@ import butterknife.OnClick;
 import framework.jimmy.com.framework.R;
 import framework.jimmy.com.framework.helper.HelperConvert;
 import framework.jimmy.com.framework.helper.HelperPermission;
+import framework.jimmy.com.framework.util.AnimUtil;
 import framework.jimmy.com.framework.util.barcode.MyBarcodeUtil;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -243,15 +244,18 @@ public class MyProfileOvoActivity extends AppCompatActivity {
         TransitionManager.beginDelayedTransition(layoutOvoPremierDetail);
         if(layoutOvoPremierDetail.getVisibility() == View.VISIBLE)
         {
-            layoutOvoPremierDetail.setVisibility(View.GONE);
-            imgExpandOvoPremier.animate().rotation(0).setDuration(100).start();
-
+            //layoutOvoPremierDetail.setVisibility(View.GONE);
+            imgExpandOvoPremier.animate().rotation(0).setDuration(300).start();
+     //       AnimUtil.expandOrCollapse(layoutOvoPremierDetail, false);
+            AnimUtil.collapse(layoutOvoPremierDetail);
         }
         else
         {
-            layoutOvoPremierDetail.setVisibility(View.VISIBLE);
+            //layoutOvoPremierDetail.setVisibility(View.VISIBLE);
 
-            imgExpandOvoPremier.animate().rotation(180).setDuration(100).start();
+            imgExpandOvoPremier.animate().rotation(180).setDuration(300).start();
+            //AnimUtil.expandOrCollapse(layoutOvoPremierDetail, true);
+            AnimUtil.expand(layoutOvoPremierDetail);
         }
     }
 
@@ -262,12 +266,14 @@ public class MyProfileOvoActivity extends AppCompatActivity {
         TransitionManager.beginDelayedTransition(layoutOvoClubDetail);
         if(layoutOvoClubDetail.getVisibility() == View.VISIBLE)
         {
-            layoutOvoClubDetail.setVisibility(View.GONE);
+            AnimUtil.collapse(layoutOvoClubDetail);
+            //layoutOvoClubDetail.setVisibility(View.GONE);
             imgExpandOvoClub.animate().rotation(0).setDuration(100).start();
         }
         else
         {
-            layoutOvoClubDetail.setVisibility(View.VISIBLE);
+            AnimUtil.expand(layoutOvoClubDetail);
+            //layoutOvoClubDetail.setVisibility(View.VISIBLE);
             imgExpandOvoClub.animate().rotation(180).setDuration(100).start();
         }
     }

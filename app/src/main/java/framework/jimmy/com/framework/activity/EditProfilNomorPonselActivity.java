@@ -10,6 +10,8 @@ import org.greenrobot.eventbus.EventBus;
 import butterknife.ButterKnife;
 import framework.jimmy.com.framework.R;
 import framework.jimmy.com.framework.model.MessageEvent;
+import framework.jimmy.com.framework.util.BadgeUtil;
+import me.leolin.shortcutbadger.ShortcutBadger;
 
 
 public class EditProfilNomorPonselActivity extends AppCompatActivity {
@@ -36,6 +38,8 @@ public class EditProfilNomorPonselActivity extends AppCompatActivity {
     private void initValue()
     {
         EventBus.getDefault().postSticky(new MessageEvent(this.getClass().getSimpleName()));
+        //ShortcutBadger.applyCount(getApplicationContext(), 0);
+        BadgeUtil.hideIconBadge(getApplicationContext());
     }
 
     @Override

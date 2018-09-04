@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -23,12 +24,15 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import framework.jimmy.com.framework.R;
 import framework.jimmy.com.framework.adapter.KategoriPengeluaranAdapter;
+import framework.jimmy.com.framework.dialog.TestDialog;
 import framework.jimmy.com.framework.helper.HelperDialog;
 import framework.jimmy.com.framework.interfaces.OnClickRecyclerViewListener;
 import framework.jimmy.com.framework.model.KategoriPengeluaran;
 
 
-public class DetailTransaksiKeluarOvoActivity extends AppCompatActivity {
+
+public class DetailTransaksiKeluarOvoActivity extends AppCompatActivity
+implements TestDialog.TestDialogListener{
 
     List<KategoriPengeluaran> listKategoriPengeluaran;
     private Toolbar toolbar;
@@ -139,6 +143,9 @@ public class DetailTransaksiKeluarOvoActivity extends AppCompatActivity {
 
     public void showDialogKategoriPicker(Activity activity, String selectedKategoriPengeluaran)
     {
+        DialogFragment dialog = TestDialog.newInstance(selectedKategoriPengeluaran);
+        dialog.show(this.getSupportFragmentManager(),"dialog");//(getFragmentManager(), "dialog");
+        /*
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle("Pilih Kategori");
         View v = activity.getLayoutInflater().inflate(R.layout.dialog_kategori_picker, null);
@@ -166,6 +173,13 @@ public class DetailTransaksiKeluarOvoActivity extends AppCompatActivity {
         dialog.setCancelable(true);
         dialog.setCanceledOnTouchOutside(true);
         dialog.show();
+        */
     }
 
+    @Override
+    public void onTestDialogListener(KategoriPengeluaran kategoriPengeluaran) {
+        txtKategori.setText(kategoriPengeluaran.getNamaKategori());
+        imgAturKategoriPengeluaran.setImageResource(kategoriPengeluaran.getResourceKategori());
+
+    }
 }
